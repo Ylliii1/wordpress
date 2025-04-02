@@ -1,7 +1,7 @@
 /*
-Theme Name: WP Devs
+Theme Name: DS-Theme-Final
 Theme URI: https://website.com/wp-devs
-Author: Marcelo Vieira
+Author: Yll Bytyqi
 Author URI: https://website.com/wp-devs
 Description: This theme is for learning purposes only.
 Requires at least: 5.6
@@ -699,7 +699,7 @@ img {
 .services-item p{
     margin-bottom: 40px;
 }
-.services-item figure{ 
+.services-item figure img{ 
     background: var( --wpdevs-black-blue );
     padding: 15px; 
 }
