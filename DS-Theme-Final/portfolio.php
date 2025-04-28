@@ -1,40 +1,40 @@
-<?php get_header() ?>
+<? get_header() ?>
 <div class="row">
     <div class="col-8">
-        <?php
+        <?php 
         $args=[
-            // 'cats'=>2,
-            // 'category_name'=>'categoria 1',
+            // 'cat' => 2,
+            // 'category_name'=>'post 1',
             // 'category_in'=>array(2,3),
             // 'category_and'=>array(2,3),
-            'posts_per_page'=>5
+            'posts_per_page' => 5
         ]
-
-        $query=new WP Query($args)
-            if($query->have_posts()):
-                while($query->have_posts()) :$query->the_post(); ?>
-
-                <h2> <?php $query->the_title() ?> </h2>
-                <p><?php $query->the_content()?></p>
-                <hr>
-                <?php
-                endwhile;
-            endif;
-                ?>
-
+        $query = new WP_Query($args )
+        if($query->have_posts()):
+            while($query->have_posts()) :$query->the_post();
+        ?>
+        <h2>
+            <?php $query->the_title()?>
+        </h2>
+        <p><?php $query->the_content(); ?></p>
+        <hr>
+        <?php
+        endwhile;
+    endif;
+    ?>
     </div>
     <div class="col-4">
-        <?php
-            if(is_active_sidebar('sidebar-blog')){
+        <?php 
+        if(is_active_sidebar('sidebar-blog')){
+
+        
         ?>
         <ul>
-            <?php dynamic_sidebar('sidebar-blog');?>
+            <?php dynamic_sidebar('sidebar-blog'); ?>
         </ul>
-                <?php
-                }
-                ?>
-
+                    <?php
+        }
+        ?>
     </div>
 </div>
-
-<?php get_footer()?>
+<? get_footer() ?>
